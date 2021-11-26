@@ -2,3 +2,4 @@ aiogram
 python-dotenv
 mop-rules
 autopep8
+udeploy
