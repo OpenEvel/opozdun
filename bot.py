@@ -64,6 +64,13 @@ async def admin_list_command(msg: types.Message):
         await bot.send_message(msg.chat.id, "Учителей нет")
 
 
+@ dp.message_handler(commands=['del'], is_admin=True)
+async def admin_del_command(msg: types.Message):
+    global TEACHERS
+    TEACHERS.clear()
+    await bot.send_message(msg.chat.id, "Список учителей очищен")
+
+
 @ dp.message_handler(is_teacher=True)
 async def teacher_handler(msg: types.Message):
     answer = get_answer()
