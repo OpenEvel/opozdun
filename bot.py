@@ -9,7 +9,7 @@ import random
 
 
 def get_answer():
-    excuses_file = open('excuses.txt')
+    excuses_file = open('excuses.txt', encoding="utf-8")
     excuses = [line.strip() for line in excuses_file]
     excuses_file.close()
     return random.choice(excuses).split("|")
